@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="nav.js" defer></script>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="logo">
+            <p>MINAMI</p>
+        </div>
+        
+            <div class = "burger" btn-active = "false">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        
+
+        <nav>
+            <ul class="nav-links" data-visible = "false">
+                <li class="active">
+                    <a href="#home-section">
+                        Home
+                    </a></li>
+                <li>
+                    <a href="#about-section">
+                        About
+                    </a></li>
+                <li>
+                    <a href="#contact-section">
+                        Contact
+                    </a></li>
+                <input type="button" class="menu-btn" onclick="window.location.href='./menu'" value="Menu">
+                    <li class="slide"></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <!--HOME PAGE-->
+    <div class="home" id="home-section">
+        <div class="container">
+            <div class="background-img">
+                <img src="./images/sushi-small.jpg" alt="main picture">
+            </div>
+            <div class="heading">
+                <div class="wrapper">
+                    <p class="sub-title">award winning japanese restaurant</p>
+                    <p class="main-title">Minami</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed. </p>
+                    <input type="button" class="explore-btn" onclick="window.location.href='#'" value="Explore Menu">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--ABOUT PAGES-->
+
+    <div class="about" id="about-section">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="./images/table.jpg" alt="about picture">
+            </div>
+            <div class="text-wrapper">
+                <div class="text">
+                    <p class="sub-title">Passion for cooking</p>
+                    <p class="title">Small Independent Restaurant</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="about-container">
+            <div class="text-wrapper">
+                <div class="text-right">
+                    <p class="sub-title">Attention to details</p>
+                    <p class="title">Passionate & Skilled Sushi Chefs</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed.</p>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="./images/chef.jpg" alt="about picture">
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="./images/plate.jpg" alt="about picture">
+            </div>
+            <div class="text-wrapper">
+                <div class="text-right">
+                    <p class="sub-title">Farm to table</p>
+                    <p class="title">Freshest Local Ingredients</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque nibh, iaculis eget neque sed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+    <!--CONTACT PAGE-->
+
+    <div class="contact" id="contact-section">
+        <div class="contact-wrapper">
+            <p class="sub-title">How to get in touch?</p>
+            <p class="contact-title">
+                CONTACT US
+            </p>
+        </div>
+        <div class="contact-container">
+            <div class="request-box">
+                <h3>Send a message to us.</h3>
+                <form>
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your name...">  
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" placeholder="Phone number...">  
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="E-mail address...">  
+                        </div>
+
+                        <div class="input-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Subject...">  
+                        </div>
+                    </div>
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Your message..."></textarea>
+                    <button class="contact-btn" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="contact-box">
+                <h3>Reach us here.</h3>
+                <table>
+                    <tr>
+                        <td><b>Address :<b></td>
+                        <td>14 Example Street, Glasgow G41 544</td>
+                    </tr>
+                    <tr>
+                        <td><b>Phone Number :</b></td>
+                        <td>+44 07521 568 479</td>
+                    </tr>
+                    <tr>
+                        <td><b>E-mail :</b></td>
+                        <td>minami@gmail.com</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

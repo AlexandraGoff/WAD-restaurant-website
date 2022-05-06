@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+{{>header}}
+</head>
+<body class="form-container">
+{{>navbar}}
+<form method="post" role="form" action="/new" class="form-box">
+<h2 class="dish-heading">Add a New Dish</h2>
+<div class="form-group">
+<label for="dish">Dish</label>
+<input type="text" class="form-control" id="dish"
+name="dish" placeholder="Enter a name..."
+required>
+</div>
+<div class="form-group">
+<label for="description">Description</label>
+<input type="text" class="form-control" id="description"
+name="description" placeholder="Enter a description..."
+required>
+</div>
+<div class="form-group">
+<label for="type">Type</label>
+<input type="text" class="form-control" id="type"
+name="type" placeholder="Enter a type..."
+required>
+</div>
+  <div class="form-group">
+    <label for="availability">Availability</label>
+    <input type="text" class="form-control" id="availability"
+    name="availability" placeholder="Enter availability"
+    required>
+  </div>
+  <div class="form-group">
+    <label for="ingredients">Ingredients</label>
+    <input type="text" class="form-control" id="ingredients"
+    name="ingredients" placeholder="Enter ingredients..."
+    required> 
+  </div>
+    <div class="form-group">
+    <label for="allergens">Allergens</label>
+    <input type="text" class="form-control" id="allergens"
+    name="allergens" placeholder="Enter allergens..."
+    required>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" id="price"
+    name="price" placeholder="Enter price..."
+    required>
+  </div>
+<div class="form-group">
+<input type="submit" value="Post entry" class="user-btn">
+</div>
+</form>
+</body>
+</html>

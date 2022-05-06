@@ -1,0 +1,53 @@
+<html><head>
+{{>header}}
+</head>
+<body>
+{{>navbar}}
+<div class="buttons" style="margin-bottom: 1em;">
+{{^user}}
+{{/user}}
+{{#user}}
+  <a id="logout" href="/logout" class="logout-btn">
+    Sign out
+  </a>
+
+  <div class="buttons">
+<a href="/edit" class="user-btn">
+Edit Availability
+</a>
+
+<div class="buttons">
+<a href="/new" class="user-btn">
+Add New Dish
+</a>
+</div>
+  
+{{/user}}
+</div>
+
+
+</div>
+<h1 class="menu-heading">Menu</h1>
+{{#entries}}
+<div class="menu-wrapper">
+    <div class="dish-card">
+    <details>
+          <summary>
+              <h3><b>{{dish}}</b></h3>
+              <p>{{description}}</p>
+          </summary>
+          <p><b>Type:</b>{{type}}
+          <p><b>Ingredients: </b>{{ingredients}}</p>
+          <p><b>Allergens: </b> {{allergens}}</p>
+          <p><b>Available/Unaivailable: </b> {{availability}}</p>
+          <p><b>Price: </b> {{price}}</p>
+      </details>
+    </div>
+</div>
+{{/entries}}
+
+{{^entries}}
+No entries yet.
+{{/entries}}
+</body>
+</html>

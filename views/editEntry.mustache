@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+{{>header}}
+</head>
+<body class="form-container">
+{{>navbar}}
+<form method="post" novalidate role="form" action="/edit" class="form-box">
+<h2 class="dish-heading">Edit Availability</h2>
+<div class="form-group">
+<label for="dish">Dish</label>
+<input type="text" class="form-control" id="dish"
+name="dish" placeholder="Enter a subject line">
+</div>
+<div class="form-group">
+<label for="availability">Availability</label>
+<input type="text" class="form-control" id="availability"
+name="availability" placeholder="Enter availability">
+</div>
+<div class="form-group">
+<input type="submit" value="Post entry" class="user-btn">
+</div>
+</form>
+</body>
+</html>
