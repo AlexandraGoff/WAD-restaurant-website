@@ -1,14 +1,23 @@
 const menuDAO = require("../models/websiteModel");
 const userDao = require("../models/userModel.js");
+const res = require("express/lib/response");
 
 const db = new menuDAO('item.db');
 
 
+exports.toggle_availability = function (req,res){
+  console.log("processing edit_entry controller");
+  db.toggleAvailability(req.body.dish, req.body.availability);
+  res.redirect("/admin");
+  
+}
+
 
 exports.delete_entry = function (req,res){
   let name = req.params.dish;
-  db.deleteEntry(name);
-  console.log('deleted entry');
+  db.deleteEntry(req.body.dish);
+  console.log('deleted entry' + name);
+  res.redirect("/admin");
 }
 
 exports.show_login = function (req, res) {
@@ -16,7 +25,7 @@ exports.show_login = function (req, res) {
 };
 
 exports.handle_login = function (req, res) {
-  res.redirect("/loggedIn");
+  res.redirect("/admin");
 };
 
 exports.landing_page = function (req, res) {
@@ -52,8 +61,8 @@ exports.edit_entry = function (req,res){
     response.status(400).send("Edits must have a name.");
     return;
   }
-  db.updateEntry(req.body.dish, req.body.availability);
-  res.redirect("/loggedIn");
+  db.updateEntry(req.body.dish, req.body.description, req.body.type, req.body.availability, req.body.ingredients,req.body.allergens, req.body.price);
+  res.redirect("/admin");
 }
 
 exports.post_new_entry = function (req, res) {
@@ -63,7 +72,7 @@ exports.post_new_entry = function (req, res) {
     return;
   }
   db.addEntry(req.body.dish, req.body.description, req.body.type, req.body.availability, req.body.ingredients,req.body.allergens, req.body.price);
-  res.redirect("/loggedIn");
+  res.redirect("/admin");
 };
 
 exports.show_user_entries = function (req, res) {
@@ -87,7 +96,9 @@ exports.show_user_entries = function (req, res) {
 };
 
 exports.show_register_page = function (req, res) {
-  res.render("user/register");
+  res.render("user/register", {
+    user: "user",
+  });
 };
 
 exports.post_new_user = function (req, res) {

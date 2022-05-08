@@ -3,6 +3,7 @@
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
+    const img = document.querySelector('toggle-btn img');
     
 
     burger.addEventListener('click', () => {
@@ -43,6 +44,3 @@
             navbar.classList.remove("sticky");
         }
     }
-
-
-

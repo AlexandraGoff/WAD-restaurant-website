@@ -14,25 +14,37 @@ html{
 }
 
 
-/*LOGIN PAGE*/
-#formContent{
-    background-color: #292929;
-    width: 25%;
-    margin: 0 auto;
-    height: 30vh;
+/*LOGIN/REGISTER PAGE*/
+
+.reg-heading{
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: #819514;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+
+.formContent{
+    background-color: #292929;
+    height: 30vh;
+    display: flex;
     color: #fff;
     border-radius: 1rem;
-    padding-top: 2rem;
-    
+    padding: 2rem;
     
 }
 
 
-.login-container{
+.input-container{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 70vh;
+    width: 50%;
 }
 
 label{
@@ -43,7 +55,7 @@ label{
     width: 300px;
 }
 
-.login-btn {
+.logreg-btn {
     width: 8rem;
     border: 2px solid #9AB118;
     font-size: 15px;
@@ -52,11 +64,12 @@ label{
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     margin-top: 1.5rem;
+    align-items: center;
 }
 
 
 
-.login-btn:hover{
+.logreg-btn:hover{
     background-color: #9AB118;
     transition: all 0.4s ease-out;
     cursor: pointer;
@@ -66,44 +79,119 @@ label{
 
 /*MENU PAGE */
 
-.menu-heading{
-    color: white;
+.user-menu{
+    width: 65%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 
-.logout-btn{
-    padding: 3rem;
+.admin-btn {
     border: 2px solid #9AB118;
     font-size: 15px;
     background-color: transparent;
     color: #E3E3E3;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    margin-top: 1.5rem;
+    padding: 0.4rem;
     text-decoration: none;
 }
+.admin-btn a{
+    margin: 0 auto;
+}
 
-.logout-btn:hover{
+
+
+.admin-btn:hover{
     background-color: #9AB118;
     transition: all 0.4s ease-out;
     cursor: pointer;
 }
 
-.user-btn{
-    margin-top: 1rem;
-    padding: 1.3rem;
-    border: 2px solid #9AB118;
+
+.toggle-btn{
+    margin-top: 0.5rem;
+    width: 7rem;
     font-size: 15px;
-    background-color: transparent;
+    background-color: #444444;
+    border-radius: 1rem;
     color: #E3E3E3;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.delete-btn{
+    width: 7rem;
+    font-size: 15px;
+    background-color: #CA2D2D;
+    border-radius: 1rem;
+    color: #E3E3E3;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+#price{
+    margin: 0 auto;
+}
+
+#price-container{
+    height: 130px;
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.avail-box{
+    margin-right: 1rem;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
+
+.avail-box a{
+    margin: 0 auto;
+
+}
+
+.dish-card{
+    width: 80%;
+  }
+  
+
+.menu-heading{
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.user-btn{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding: 1.3rem;
+    background-color:  #292929;
+    font-size: 15px;
+    color: #E3E3E3;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
     margin-top: 1.5rem;
     text-decoration: none;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .user-btn:hover{
@@ -137,6 +225,7 @@ details > summary {
     background-color: #292929;
     padding: 1.5rem;
     display: flex;
+    flex-direction: row;
     margin-bottom: 2rem;
 }
 
@@ -152,11 +241,6 @@ details > summary {
   width: 1.5rem;
   cursor: pointer;
 }
-
-.dish-card{
-  width: 100%;
-}
-
 /*CONTACT PAGE*/
 
 h3 {
@@ -435,10 +519,7 @@ label {
     top: 0;
     width: 100%;
 }
-
-/*.sticky + body {
-    padding-top: 60px;
-}*/
+ 
 nav{
     display: flex;
     justify-content: space-around;
@@ -484,6 +565,7 @@ ul li {
     letter-spacing: 3px;
     font-size: 30px;
     font-weight: 500;
+    cursor: pointer;
     
 }
 
@@ -570,6 +652,8 @@ ul li {
 
     .background-img{
         width: 100%;
+    
+        margin-top: 15rem;
     }
     .container{
         flex-direction: column;
@@ -585,9 +669,11 @@ ul li {
         text-align: center;
     }
 
-    .sub-title{
-        margin-top: 1rem;
+
+    .menu-wrapper{
+        width: 80%;
     }
+
 
     
     

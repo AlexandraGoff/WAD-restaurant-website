@@ -3,47 +3,69 @@
 </head>
 <body>
 {{>navbar}}
-<div class="buttons" style="margin-bottom: 1em;">
+
 {{^user}}
 {{/user}}
+
+
+<h1 class="menu-heading">{{title}}</h1>
 {{#user}}
-  <a id="logout" href="/logout" class="logout-btn">
-    Sign out
+
+<div class="user-menu">
+
+  <a href="/register" class="user-btn">
+  Add New User
   </a>
 
-  <div class="buttons">
-<a href="/edit" class="user-btn">
-Edit Availability
-</a>
+ <a href="/edit" class="user-btn">
+  Edit Dish
+  </a>
 
-<div class="buttons">
-<a href="/new" class="user-btn">
-Add New Dish
-</a>
+ <a href="/new" class="user-btn">
+  Add Dish
+  </a>
+
+  <a id="logout" href="/logout" class="user-btn">
+  Sign out
+  </a>
+
 </div>
-  
+
 {{/user}}
-</div>
-
-
-</div>
-<h1 class="menu-heading">Menu</h1>
 {{#entries}}
-<div class="menu-wrapper">
-    <div class="dish-card">
-    <details>
-          <summary>
-              <h3><b>{{dish}}</b></h3>
-              <p>{{description}}</p>
-          </summary>
-          <p><b>Type:</b>{{type}}
-          <p><b>Ingredients: </b>{{ingredients}}</p>
-          <p><b>Allergens: </b> {{allergens}}</p>
-          <p><b>Available/Unaivailable: </b> {{availability}}</p>
-          <p><b>Price: </b> {{price}}</p>
-      </details>
-    </div>
-</div>
+
+  <div class="menu-wrapper">
+  {{#user}}
+      <div class="avail-box">
+        <form method="post" role="form" action="/toggle">
+            <input type = "hidden" name = "availability" value = "{{availability}}" />
+            <input type = "hidden" name = "dish" value = "{{dish}}" />
+             <input type="submit"  value="{{availability}}" class="toggle-btn">
+        </form>
+
+        <form method="post" role="form" action="/delete">
+            <input type = "hidden" name = "dish" value = "{{dish}}"/>
+            <input type="submit"  value="delete" class="delete-btn" onclick="window.confirm('Are you sure you want to delete this item?')">
+        </form>
+      </div>
+      {{/user}}
+      <div class="dish-card">
+      <details>
+            <summary>
+                <h3><b><p id="dish">{{dish}}</p></b></h3>
+                <p>{{description}}</p>
+            </summary>
+            <p><b>Type: </b>{{type}}
+            <p><b>Ingredients: </b>{{ingredients}}</p>
+            <p><b>Allergens: </b> {{allergens}}</p>
+            {{#user}}
+            <br>
+            <p>This dish is <b>{{availability}}</b> in the public menu.</p>
+            {{/user}}
+        </details>
+      </div>
+      <div id="price-container"><p id="price">{{price}}</p></div>
+  </div>
 {{/entries}}
 
 {{^entries}}

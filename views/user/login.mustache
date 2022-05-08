@@ -2,10 +2,12 @@
 <head>
     {{>header}}
 </head>
-<body class="login-container">
+<body>
+<h2 class="reg-heading">Sign In</h2>
+<div class="input-container">
     <h1>{{title}}</h1>
 
-    <div id="formContent">
+    <div class="formContent">
         <form method="POST" action="/login">
             <div class="form-group">
                 <label for="username" class="col-sm-2 col-formlabel">
@@ -23,8 +25,9 @@
                     <input type="password" class="form-control"  id="password" name="password"placeholder="password">
                 </div>
             </div>
-            <input type="submit" class="login-btn" value="Sign In">
+            <input type="submit" class="logreg-btn" value="Sign In">
         </form>
     </div>
+</div>
 </body>
 </html>
